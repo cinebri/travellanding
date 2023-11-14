@@ -41,6 +41,25 @@
                 </li>
               </ul>
             </div>
+            <div class="mobile-menu">
+              <div class="mobile-menu__button">
+              </div>
+              <ul class="mobile-menu__list hidden">
+                <div class="mobile-menu__close"></div>
+                <li class="mobile-menu__item">
+                  <a href="#" class="mobile-menu__link">Articles</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="#" class="mobile-menu__link">Locations</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="#" class="mobile-menu__link">Videos</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="#" class="mobile-menu__link">Sign In</a>
+                </li>
+              </ul>
+            </div>
           </nav>
           <div class="content">
             <div>
@@ -440,5 +459,18 @@
       </div>
     </div>
     </footer>
+    <script>
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const mobileMenuButton = document.querySelector('.mobile-menu__button');
+      const mobileMenuList = document.querySelector('.mobile-menu__list');
+      const mobileMenuClose = document.querySelector('.mobile-menu__close');
+      function toggleMenu(){
+        mobileMenuList.classList.toggle('hidden');
+        mobileMenuButton.classList.toggle('hidden');
+        mobileMenu.classList.toggle('opened')
+      }
+      mobileMenuButton.addEventListener('click', toggleMenu)
+      mobileMenuClose.addEventListener('click', toggleMenu)
+    </script>
   </body>
 </html>
